@@ -13,6 +13,8 @@ struct ListOrder: Decodable {
     var orders: [Order]?
 }
 
+print("...")
+
 struct Order: Decodable {
     var shippingInfo: [ShippingInfo]?
     var paymentMethod: String
