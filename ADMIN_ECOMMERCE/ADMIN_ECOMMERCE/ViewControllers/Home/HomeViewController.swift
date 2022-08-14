@@ -40,6 +40,18 @@ class HomeViewController: UIViewController {
         setupView()
         
     }
+    
+    func formatDate(date: String) -> String {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd"
+        
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "dd-MM-yyyy"
+        
+        guard let dateAfter: Date? = dateFormatterGet.date(from: date) else { return ""}
+        
+        return dateFormatterPrint.string(from: dateAfter!)
+    }
 
     private func setupView() {
         viewOfImage.layer.cornerRadius = viewOfImage.frame.height/2
@@ -123,11 +135,12 @@ extension HomeViewController {
                 self.nameLabel.text = info.user?.name
                 self.emailLabel.text = info.user?.emailUser
                 self.placeOfBirthLabel.text = info.user?.placeOfBirth
-                self.dateOfBirthLabel.text = info.user?.dateOfBirth
+                self.dateOfBirthLabel.text = self.formatDate(date: info.user?.dateOfBirth ?? "")
+                
                 self.phoneNumberLabel.text = info.user?.phoneNumber
                 guard let createAt = info.user?.createAt else { return }
                 let index = createAt.index(createAt.startIndex, offsetBy: 10)
-                self.createAtLabel.text = String(createAt.prefix(upTo: index))
+                self.createAtLabel.text = self.formatDate(date: String(createAt.prefix(upTo: index)))
             }
         }
     }

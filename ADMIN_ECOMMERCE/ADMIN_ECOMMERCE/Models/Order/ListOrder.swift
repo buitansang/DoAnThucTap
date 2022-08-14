@@ -13,9 +13,8 @@ struct ListOrder: Decodable {
     var orders: [Order]?
 }
 
-
 struct Order: Decodable {
-    var shippingInfo: [ShippingInfo]?
+    var shippingInfo: ShippingInfo?
     var paymentMethod: String
     var itemsPrice: Double?
     var taxPrice: Double?
@@ -30,7 +29,7 @@ struct Order: Decodable {
 
 struct ShippingInfo: Decodable {
     var address: String?
-    var city:  String?
+    var city: String?
     var phoneNo: String?
     var postalCode: String?
     var country: String?
@@ -42,6 +41,7 @@ struct OrderItem: Decodable {
     var quantity: Int?
     var product: String?
     var image: String?
+    
 }
 
 struct Discount: Decodable {

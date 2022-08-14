@@ -227,6 +227,36 @@ struct APIService {
             print("Lỗi getListOrder")
         }
     }
+    
+    static func getOrderByID(orderID: String, _ completion: @escaping(OrderByID?, String?) -> ()) {
+        APIController.request(OrderByID.self, .getOrderByID(orderID)) { error, data in
+            if let order = data {
+                completion(order, nil)
+                return
+            }
+            completion(nil, error)
+            print("Lỗi getOrderByID")
+        }
+    }
+    
+    static func updateOrderStatus(with orderID: String, _ status: String, _ completion: @escaping(OrderStatus?, String?) -> ()) {
+        let params: [String: Any] = [
+            "orderStatus": status,
+            "params": [
+                "userToken": UserService.shared.getToken()
+            ]
+        ]
+        
+        APIController.request(OrderStatus.self, .updateOrderStatus(orderID), params: params) { error, data in
+            if let detailOrder = data {
+                completion(detailOrder, nil)
+                return
+            }
+            completion(nil, error)
+            print("Lỗi updateOrderStatus")
+        }
+    }
+    
 }
    
 //
