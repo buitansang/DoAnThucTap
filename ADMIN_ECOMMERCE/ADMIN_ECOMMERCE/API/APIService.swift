@@ -257,6 +257,69 @@ struct APIService {
         }
     }
     
+    static func statisticalUser(_ completion: @escaping(Statistical?, String?) -> ()) {
+        let params: [String: Any] = [
+            "filter": "year",
+            "userToken": UserService.shared.getToken()
+        ]
+        
+        APIController.request(Statistical.self, .analyticsUser, params: params) { error, data in
+            if let res = data {
+                completion(res, nil)
+                return
+            }
+            completion(nil, error)
+            print("Lỗi statisticalUser")
+        }
+    }
+    
+    static func statisticalOrder(_ completion: @escaping(Statistical?, String?) -> ()) {
+        let params: [String: Any] = [
+            "filter": "year",
+            "userToken": UserService.shared.getToken()
+        ]
+        
+        APIController.request(Statistical.self, .analyticsOrder, params: params) { error, data in
+            if let res = data {
+                completion(res, nil)
+                return
+            }
+            completion(nil, error)
+            print("Lỗi statisticalOrder")
+        }
+    }
+    
+    static func statisticalProduct(_ completion: @escaping(Statistical?, String?) -> ()) {
+        let params: [String: Any] = [
+            "filter": "year",
+            "userToken": UserService.shared.getToken()
+        ]
+        
+        APIController.request(Statistical.self, .analyticsProduct, params: params) { error, data in
+            if let res = data {
+                completion(res, nil)
+                return
+            }
+            completion(nil, error)
+            print("Lỗi statisticalProduct")
+        }
+    }
+    
+    static func statisticalPayment(_ completion: @escaping(Statistical?, String?) -> ()) {
+        let params: [String: Any] = [
+            "filter": "year",
+            "userToken": UserService.shared.getToken()
+        ]
+        
+        APIController.request(Statistical.self, .analyticsPayment, params: params) { error, data in
+            if let res = data {
+                completion(res, nil)
+                return
+            }
+            completion(nil, error)
+            print("Lỗi statisticalPayment")
+        }
+    }
 }
    
 //

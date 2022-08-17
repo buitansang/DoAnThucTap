@@ -25,6 +25,10 @@ enum APIManager {
     case getListOrder
     case getOrderByID(String)
     case updateOrderStatus(String)
+    case analyticsUser
+    case analyticsOrder
+    case analyticsProduct
+    case analyticsPayment
 }
 
 extension APIManager {
@@ -50,6 +54,10 @@ extension APIManager {
         case .getListOrder: path = "/all/orders"
         case .getOrderByID(let orderID): path = "/admin/order/\(orderID)?userToken=\(UserService.shared.getToken())"
         case .updateOrderStatus(let orderID): path = "/admin/order/\(orderID)"
+        case .analyticsUser: path = "/analytics-by-user"
+        case .analyticsOrder: path = "/analytics-by-order"
+        case .analyticsProduct: path = "/analytics-by-product"
+        case .analyticsPayment: path = "/analytics-payment"
    
         }
         return baseURL + path
@@ -58,7 +66,7 @@ extension APIManager {
     //MARK: - METHOD
     var method: HTTPMethod {
         switch self {
-        case .getInfoUser, .getListProduct, .getDetailProduct, .getReviewComment, .getListCustomer, .detailCustomer, .getListOrder, .getOrderByID :
+        case .getInfoUser, .getListProduct, .getDetailProduct, .getReviewComment, .getListCustomer, .detailCustomer, .getListOrder, .getOrderByID, .analyticsUser, .analyticsOrder,  .analyticsProduct, .analyticsPayment :
             return .get
         case .login, .addNewProduct :
             return .post

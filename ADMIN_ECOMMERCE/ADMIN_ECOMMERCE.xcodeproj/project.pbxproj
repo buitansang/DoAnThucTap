@@ -25,6 +25,7 @@
 		AD015DD4288D4004004FF02A /* InfoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD015DD3288D4004004FF02A /* InfoUser.swift */; };
 		AD015DD8288D43EF004FF02A /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD015DD7288D43EF004FF02A /* EditProfileViewController.swift */; };
 		AD015DDA288D49F9004FF02A /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD015DD9288D49F9004FF02A /* UpdateProfile.swift */; };
+		AD07035E28A916E400A3A835 /* StatisticalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD07035D28A916E300A3A835 /* StatisticalUser.swift */; };
 		AD16ABFC2894E55F00EE9171 /* ListProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD16ABFB2894E55F00EE9171 /* ListProductViewController.swift */; };
 		AD16AC002894E62600EE9171 /* ListProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD16ABFE2894E62600EE9171 /* ListProductTableViewCell.swift */; };
 		AD16AC012894E62600EE9171 /* ListProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD16ABFF2894E62600EE9171 /* ListProductTableViewCell.xib */; };
@@ -46,6 +47,7 @@
 		AD93896428959B7C006FE280 /* ListCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD93896328959B7C006FE280 /* ListCustomerViewController.swift */; };
 		AD93896828959F5C006FE280 /* ListCustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD93896628959F5C006FE280 /* ListCustomerTableViewCell.swift */; };
 		AD93896928959F5C006FE280 /* ListCustomerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD93896728959F5C006FE280 /* ListCustomerTableViewCell.xib */; };
+		ADCE023428A8DCB00090153A /* StatisticalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE023328A8DCB00090153A /* StatisticalViewController.swift */; };
 		ADEB8903289E073B003732EE /* OrderByID.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEB8902289E073B003732EE /* OrderByID.swift */; };
 		ADEB8907289E0941003732EE /* DetailOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEB8906289E0941003732EE /* DetailOrderViewController.swift */; };
 		ADEB890B289E5657003732EE /* DetailOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEB8909289E5657003732EE /* DetailOrderTableViewCell.swift */; };
@@ -79,6 +81,7 @@
 		AD015DD3288D4004004FF02A /* InfoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUser.swift; sourceTree = "<group>"; };
 		AD015DD7288D43EF004FF02A /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		AD015DD9288D49F9004FF02A /* UpdateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
+		AD07035D28A916E300A3A835 /* StatisticalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticalUser.swift; sourceTree = "<group>"; };
 		AD16ABFB2894E55F00EE9171 /* ListProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductViewController.swift; sourceTree = "<group>"; };
 		AD16ABFE2894E62600EE9171 /* ListProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductTableViewCell.swift; sourceTree = "<group>"; };
 		AD16ABFF2894E62600EE9171 /* ListProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListProductTableViewCell.xib; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		AD93896328959B7C006FE280 /* ListCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomerViewController.swift; sourceTree = "<group>"; };
 		AD93896628959F5C006FE280 /* ListCustomerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomerTableViewCell.swift; sourceTree = "<group>"; };
 		AD93896728959F5C006FE280 /* ListCustomerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCustomerTableViewCell.xib; sourceTree = "<group>"; };
+		ADCE023328A8DCB00090153A /* StatisticalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticalViewController.swift; sourceTree = "<group>"; };
 		ADEB8902289E073B003732EE /* OrderByID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderByID.swift; sourceTree = "<group>"; };
 		ADEB8906289E0941003732EE /* DetailOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOrderViewController.swift; sourceTree = "<group>"; };
 		ADEB8909289E5657003732EE /* DetailOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOrderTableViewCell.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 		AD015DB4288D0298004FF02A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AD07035C28A916CD00A3A835 /* Statistical */,
 				AD743E7B2896DF0600621A56 /* Order */,
 				AD93895F2895979F006FE280 /* Customer */,
 				AD16AC022894EC6400EE9171 /* Product */,
@@ -216,6 +221,7 @@
 		AD015DB5288D02A0004FF02A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				ADCE023228A8DC4B0090153A /* Statistical */,
 				AD743E7E2896DF7300621A56 /* Order */,
 				AD93896228959B64006FE280 /* Customer */,
 				AD16ABF92894E51E00EE9171 /* Product */,
@@ -275,6 +281,14 @@
 				AD015DD7288D43EF004FF02A /* EditProfileViewController.swift */,
 			);
 			path = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		AD07035C28A916CD00A3A835 /* Statistical */ = {
+			isa = PBXGroup;
+			children = (
+				AD07035D28A916E300A3A835 /* StatisticalUser.swift */,
+			);
+			path = Statistical;
 			sourceTree = "<group>";
 		};
 		AD16ABF92894E51E00EE9171 /* Product */ = {
@@ -405,6 +419,14 @@
 				AD93896728959F5C006FE280 /* ListCustomerTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		ADCE023228A8DC4B0090153A /* Statistical */ = {
+			isa = PBXGroup;
+			children = (
+				ADCE023328A8DCB00090153A /* StatisticalViewController.swift */,
+			);
+			path = Statistical;
 			sourceTree = "<group>";
 		};
 		ADEB8904289E0915003732EE /* ListOrder */ = {
@@ -599,11 +621,13 @@
 				AD015DBE288D0315004FF02A /* UserService.swift in Sources */,
 				AD16AC132895182900EE9171 /* AddProductViewController.swift in Sources */,
 				AD015DCD288D1E6F004FF02A /* HomeViewController.swift in Sources */,
+				AD07035E28A916E400A3A835 /* StatisticalUser.swift in Sources */,
 				AD16AC182895486600EE9171 /* EditProductViewController.swift in Sources */,
 				AD938961289597AF006FE280 /* ListCustomer.swift in Sources */,
 				AD16AC0B28950E1600EE9171 /* ReviewComment.swift in Sources */,
 				AD015D9E288D0250004FF02A /* AppDelegate.swift in Sources */,
 				AD93895E28958F77006FE280 /* DeleteProduct.swift in Sources */,
+				ADCE023428A8DCB00090153A /* StatisticalViewController.swift in Sources */,
 				AD015DDA288D49F9004FF02A /* UpdateProfile.swift in Sources */,
 				ADF9AA672895AF0A00B6E883 /* DetailCustomerViewController.swift in Sources */,
 				AD743E802896DF8400621A56 /* ListOrderViewController.swift in Sources */,

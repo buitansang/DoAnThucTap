@@ -929,7 +929,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lD-wt-qsu" customClass="CosmosView" customModule="Cosmos">
-                                                        <rect key="frame" x="180" y="0.0" width="199" height="20"/>
+                                                        <rect key="frame" x="180" y="0.0" width="199" height="26.5"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
                                                                 <color key="value" systemColor="systemYellowColor"/>
@@ -1885,6 +1885,21 @@
             </objects>
             <point key="canvasLocation" x="104" y="1454"/>
         </scene>
+        <!--Statistical View Controller-->
+        <scene sceneID="Nyy-bz-5sh">
+            <objects>
+                <viewController storyboardIdentifier="StatisticalViewController" id="iAb-jz-gqy" customClass="StatisticalViewController" customModule="ADMIN_ECOMMERCE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lhb-ze-mze">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cAm-eM-a75"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UVN-AR-qUd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="2118"/>
+        </scene>
         <!--Detail Customer-->
         <scene sceneID="0i6-mn-Zrd">
             <objects>
@@ -2439,11 +2454,6 @@
             <point key="canvasLocation" x="-700" y="1448"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="2lD-wt-qsu">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-    </designables>
     <resources>
         <image name="city" width="64" height="64"/>
         <image name="clothes" width="64" height="64"/>

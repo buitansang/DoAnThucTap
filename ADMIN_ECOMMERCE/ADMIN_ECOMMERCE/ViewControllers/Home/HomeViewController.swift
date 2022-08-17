@@ -107,7 +107,9 @@ extension HomeViewController: MenuControllerDelegate {
                 guard let listCustomerVC = sb.instantiateViewController(withIdentifier: "ListCustomerViewController") as? ListCustomerViewController else { return }
                 self.navigationController?.pushViewController(listCustomerVC, animated: true)
             } else if name == MenuController.MenuOptions.analytics.rawValue {
-                
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                guard let statisticalVC = sb.instantiateViewController(withIdentifier: "StatisticalViewController") as? StatisticalViewController else { return }
+                self.navigationController?.pushViewController(statisticalVC, animated: true)
             }  else {
                 let alert = UIAlertController(title: "", message: "Are you sure you want to log out?", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
