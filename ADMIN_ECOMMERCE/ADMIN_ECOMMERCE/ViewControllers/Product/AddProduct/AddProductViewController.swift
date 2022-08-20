@@ -136,7 +136,7 @@ class AddProductViewController: UIViewController {
         nameItemOfCategory.text = "Category"
         category.anchorView = dropDownCategory
         category.dataSource = categoryValues
-        category.bottomOffset = CGPoint(x: 0, y:(classify.anchorView?.plainView.bounds.height)! + 5)
+        category.bottomOffset = CGPoint(x: 0, y:(category.anchorView?.plainView.bounds.height)! + 5)
         category.direction = .top
         category.selectionAction = { [unowned self] (index: Int, item: String) in
           print("Selected item: \(item) at index: \(index)")

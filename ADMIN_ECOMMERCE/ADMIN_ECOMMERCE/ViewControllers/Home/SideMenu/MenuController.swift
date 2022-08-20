@@ -17,6 +17,7 @@ class MenuController: UITableViewController {
         case products = "Managed Products"
         case orders = "Managed Orders"
         case customers = "Managed Customer"
+        case discounts = "Managed Discount"
         case analytics = "Analytics"
         case logout = "Logout"
         
@@ -28,6 +29,8 @@ class MenuController: UITableViewController {
                 return "orders"
             case .customers:
                  return "customers"
+            case .discounts:
+                return "orders"
             case .analytics:
                 return "analytics"
             case .logout:

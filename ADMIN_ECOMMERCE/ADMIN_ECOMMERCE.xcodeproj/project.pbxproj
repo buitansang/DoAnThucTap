@@ -48,6 +48,11 @@
 		AD93896828959F5C006FE280 /* ListCustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD93896628959F5C006FE280 /* ListCustomerTableViewCell.swift */; };
 		AD93896928959F5C006FE280 /* ListCustomerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD93896728959F5C006FE280 /* ListCustomerTableViewCell.xib */; };
 		ADCE023428A8DCB00090153A /* StatisticalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE023328A8DCB00090153A /* StatisticalViewController.swift */; };
+		ADE3065928AFF0AB00DB6749 /* ListDiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3065828AFF0AB00DB6749 /* ListDiscountViewController.swift */; };
+		ADE3065D28AFF16E00DB6749 /* ListDiscountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3065B28AFF16E00DB6749 /* ListDiscountTableViewCell.swift */; };
+		ADE3065E28AFF16E00DB6749 /* ListDiscountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE3065C28AFF16E00DB6749 /* ListDiscountTableViewCell.xib */; };
+		ADE3066128AFF72A00DB6749 /* ListDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3066028AFF72A00DB6749 /* ListDiscount.swift */; };
+		ADE3066528B0044300DB6749 /* AddDiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3066428B0044300DB6749 /* AddDiscountViewController.swift */; };
 		ADEB8903289E073B003732EE /* OrderByID.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEB8902289E073B003732EE /* OrderByID.swift */; };
 		ADEB8907289E0941003732EE /* DetailOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEB8906289E0941003732EE /* DetailOrderViewController.swift */; };
 		ADEB890B289E5657003732EE /* DetailOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEB8909289E5657003732EE /* DetailOrderTableViewCell.swift */; };
@@ -104,6 +109,11 @@
 		AD93896628959F5C006FE280 /* ListCustomerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomerTableViewCell.swift; sourceTree = "<group>"; };
 		AD93896728959F5C006FE280 /* ListCustomerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCustomerTableViewCell.xib; sourceTree = "<group>"; };
 		ADCE023328A8DCB00090153A /* StatisticalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticalViewController.swift; sourceTree = "<group>"; };
+		ADE3065828AFF0AB00DB6749 /* ListDiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDiscountViewController.swift; sourceTree = "<group>"; };
+		ADE3065B28AFF16E00DB6749 /* ListDiscountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDiscountTableViewCell.swift; sourceTree = "<group>"; };
+		ADE3065C28AFF16E00DB6749 /* ListDiscountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDiscountTableViewCell.xib; sourceTree = "<group>"; };
+		ADE3066028AFF72A00DB6749 /* ListDiscount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDiscount.swift; sourceTree = "<group>"; };
+		ADE3066428B0044300DB6749 /* AddDiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscountViewController.swift; sourceTree = "<group>"; };
 		ADEB8902289E073B003732EE /* OrderByID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderByID.swift; sourceTree = "<group>"; };
 		ADEB8906289E0941003732EE /* DetailOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOrderViewController.swift; sourceTree = "<group>"; };
 		ADEB8909289E5657003732EE /* DetailOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOrderTableViewCell.swift; sourceTree = "<group>"; };
@@ -209,6 +219,7 @@
 		AD015DB4288D0298004FF02A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ADE3065F28AFF71800DB6749 /* Discounts */,
 				AD07035C28A916CD00A3A835 /* Statistical */,
 				AD743E7B2896DF0600621A56 /* Order */,
 				AD93895F2895979F006FE280 /* Customer */,
@@ -221,6 +232,7 @@
 		AD015DB5288D02A0004FF02A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				ADE3065428AFEF9E00DB6749 /* Discounts */,
 				ADCE023228A8DC4B0090153A /* Statistical */,
 				AD743E7E2896DF7300621A56 /* Order */,
 				AD93896228959B64006FE280 /* Customer */,
@@ -429,6 +441,49 @@
 			path = Statistical;
 			sourceTree = "<group>";
 		};
+		ADE3065428AFEF9E00DB6749 /* Discounts */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3066328B0041400DB6749 /* Add Discount */,
+				ADE3066228B0040B00DB6749 /* List */,
+			);
+			path = Discounts;
+			sourceTree = "<group>";
+		};
+		ADE3065A28AFF13B00DB6749 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3065B28AFF16E00DB6749 /* ListDiscountTableViewCell.swift */,
+				ADE3065C28AFF16E00DB6749 /* ListDiscountTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADE3065F28AFF71800DB6749 /* Discounts */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3066028AFF72A00DB6749 /* ListDiscount.swift */,
+			);
+			path = Discounts;
+			sourceTree = "<group>";
+		};
+		ADE3066228B0040B00DB6749 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3065A28AFF13B00DB6749 /* View */,
+				ADE3065828AFF0AB00DB6749 /* ListDiscountViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		ADE3066328B0041400DB6749 /* Add Discount */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3066428B0044300DB6749 /* AddDiscountViewController.swift */,
+			);
+			path = "Add Discount";
+			sourceTree = "<group>";
+		};
 		ADEB8904289E0915003732EE /* ListOrder */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,6 +593,7 @@
 				AD16AC102895101200EE9171 /* ReviewsTableViewCell.xib in Resources */,
 				AD16AC012894E62600EE9171 /* ListProductTableViewCell.xib in Resources */,
 				AD015DA7288D0253004FF02A /* Assets.xcassets in Resources */,
+				ADE3065E28AFF16E00DB6749 /* ListDiscountTableViewCell.xib in Resources */,
 				AD743E852896E13300621A56 /* ListOrderTableViewCell.xib in Resources */,
 				AD015DA5288D0250004FF02A /* Main.storyboard in Resources */,
 				ADEB890C289E5657003732EE /* DetailOrderTableViewCell.xib in Resources */,
@@ -613,6 +669,7 @@
 				AD16AC072894F6A700EE9171 /* DetailProductViewController.swift in Sources */,
 				AD16AC002894E62600EE9171 /* ListProductTableViewCell.swift in Sources */,
 				ADEB8903289E073B003732EE /* OrderByID.swift in Sources */,
+				ADE3065928AFF0AB00DB6749 /* ListDiscountViewController.swift in Sources */,
 				AD015DD4288D4004004FF02A /* InfoUser.swift in Sources */,
 				ADEB8907289E0941003732EE /* DetailOrderViewController.swift in Sources */,
 				ADEB8912289E655B003732EE /* OrderStatus.swift in Sources */,
@@ -624,7 +681,9 @@
 				AD07035E28A916E400A3A835 /* StatisticalUser.swift in Sources */,
 				AD16AC182895486600EE9171 /* EditProductViewController.swift in Sources */,
 				AD938961289597AF006FE280 /* ListCustomer.swift in Sources */,
+				ADE3065D28AFF16E00DB6749 /* ListDiscountTableViewCell.swift in Sources */,
 				AD16AC0B28950E1600EE9171 /* ReviewComment.swift in Sources */,
+				ADE3066128AFF72A00DB6749 /* ListDiscount.swift in Sources */,
 				AD015D9E288D0250004FF02A /* AppDelegate.swift in Sources */,
 				AD93895E28958F77006FE280 /* DeleteProduct.swift in Sources */,
 				ADCE023428A8DCB00090153A /* StatisticalViewController.swift in Sources */,
@@ -633,6 +692,7 @@
 				AD743E802896DF8400621A56 /* ListOrderViewController.swift in Sources */,
 				AD16AC092894FED900EE9171 /* DetailProduct.swift in Sources */,
 				AD015DB8288D02E6004FF02A /* APIController.swift in Sources */,
+				ADE3066528B0044300DB6749 /* AddDiscountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

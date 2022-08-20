@@ -29,6 +29,8 @@ enum APIManager {
     case analyticsOrder
     case analyticsProduct
     case analyticsPayment
+    case getDiscounts
+    case createDiscount
 }
 
 extension APIManager {
@@ -58,6 +60,8 @@ extension APIManager {
         case .analyticsOrder: path = "/analytics-by-order"
         case .analyticsProduct: path = "/analytics-by-product"
         case .analyticsPayment: path = "/analytics-payment"
+        case .getDiscounts: path = "/admin/discounts"
+        case .createDiscount: path = "/create-discount"
    
         }
         return baseURL + path
@@ -66,9 +70,9 @@ extension APIManager {
     //MARK: - METHOD
     var method: HTTPMethod {
         switch self {
-        case .getInfoUser, .getListProduct, .getDetailProduct, .getReviewComment, .getListCustomer, .detailCustomer, .getListOrder, .getOrderByID, .analyticsUser, .analyticsOrder,  .analyticsProduct, .analyticsPayment :
+        case .getInfoUser, .getListProduct, .getDetailProduct, .getReviewComment, .getListCustomer, .detailCustomer, .getListOrder, .getOrderByID, .analyticsUser, .analyticsOrder,  .analyticsProduct, .analyticsPayment, .getDiscounts :
             return .get
-        case .login, .addNewProduct :
+        case .login, .addNewProduct, .createDiscount :
             return .post
         case .updateProfile, .editProduct, .updateRole, .updateOrderStatus :
             return .put

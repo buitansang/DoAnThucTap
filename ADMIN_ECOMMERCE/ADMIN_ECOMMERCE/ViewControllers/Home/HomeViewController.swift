@@ -63,6 +63,7 @@ class HomeViewController: UIViewController {
         let menu = MenuController(with: [MenuController.MenuOptions.products.rawValue,
                                          MenuController.MenuOptions.orders.rawValue,
                                          MenuController.MenuOptions.customers.rawValue,
+                                         MenuController.MenuOptions.discounts.rawValue,
                                          MenuController.MenuOptions.analytics.rawValue,
                                          MenuController.MenuOptions.logout.rawValue])
         menu.delegate = self
@@ -90,14 +91,12 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: MenuControllerDelegate {
     func didSelectMenuItem(name: String) {
-  
         sideMenu?.dismiss(animated: true, completion: { [weak self] in
             guard let self = self else { return }
             if name == MenuController.MenuOptions.products.rawValue {
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 guard let listProductVC = sb.instantiateViewController(withIdentifier: "ListProductViewController") as? ListProductViewController else { return }
                 self.navigationController?.pushViewController(listProductVC, animated: true)
-                
             } else if name == MenuController.MenuOptions.orders.rawValue {
               let sb = UIStoryboard(name: "Main", bundle: nil)
                 guard let listOrderVC = sb.instantiateViewController(withIdentifier: "ListOrderViewController") as? ListOrderViewController else { return }
@@ -106,6 +105,10 @@ extension HomeViewController: MenuControllerDelegate {
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 guard let listCustomerVC = sb.instantiateViewController(withIdentifier: "ListCustomerViewController") as? ListCustomerViewController else { return }
                 self.navigationController?.pushViewController(listCustomerVC, animated: true)
+            } else if name == MenuController.MenuOptions.discounts.rawValue {
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                guard let listDiscountVC = sb.instantiateViewController(withIdentifier: "ListDiscountViewController") as? ListDiscountViewController else { return }
+                self.navigationController?.pushViewController(listDiscountVC, animated: true)
             } else if name == MenuController.MenuOptions.analytics.rawValue {
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 guard let statisticalVC = sb.instantiateViewController(withIdentifier: "StatisticalViewController") as? StatisticalViewController else { return }

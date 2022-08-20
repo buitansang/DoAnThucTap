@@ -320,6 +320,46 @@ struct APIService {
             print("Lỗi statisticalPayment")
         }
     }
+    
+    //get Discounts Code
+    static func getDiscounts(with keyword: String, _ completion: @escaping(ListDiscount?, String?) -> ()) {
+        let params: [String: Any] = ["keyword": keyword, "userToken": UserService.shared.getToken()]
+    
+        APIController.request(ListDiscount.self, .getDiscounts, params: params) { error, data in
+            if let listDiscount = data {
+                completion(listDiscount, nil)
+                return
+            }
+            completion(nil, error)
+            print("Lỗi getDiscounts: \(error)")
+        }
+    }
+    
+    static func createDiscount(name: String, quantity: Int, categoryProduct: String, validDate: Double, value: Int, completion: @escaping(OrderStatus?, String?) -> ()) {
+        let params: [String: Any] = [
+            "data": [
+                "name": name,
+                "quantity": quantity,
+                "categoryProduct": categoryProduct,
+                "validDate": validDate,
+                "value" : value
+            ],
+            "params": [
+                "userToken": UserService.shared.getToken()
+            ]
+        ]
+        
+        
+        APIController.request(OrderStatus.self, .createDiscount, params: params) { error, data in
+            if let discount = data {
+                completion(discount, nil)
+                return
+            }
+            completion(nil, error)
+            print("Lỗi createDiscount: \(error)")
+        }
+    }
+
 }
    
 //
